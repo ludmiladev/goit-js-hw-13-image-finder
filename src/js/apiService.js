@@ -6,7 +6,7 @@ import '@pnotify/core/dist/BrightTheme.css';
 import { error } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
 
-const key = '17977888-d79c616f49d1f5bae461304f8';
+const key = '18992335-41fd4645d7a92dd71026451ba';
 let query;
 let page;
 let markup;
@@ -32,7 +32,7 @@ function renderImages(e) {
 
     moreBtnCreate();
     refs.form.reset();
-        
+
     function showMore(){
         page += 1;
 
@@ -40,7 +40,7 @@ function renderImages(e) {
         .then(hits => {
         markup = card(hits);
         refs.gallery.insertAdjacentHTML('beforeend', markup);
-        
+
         setTimeout(() => {
           window.scrollTo({
             top: document.documentElement.scrollHeight,
@@ -48,7 +48,7 @@ function renderImages(e) {
           });
         }, 1000);
     })
-    };  
+    };
     document.querySelector('.more').addEventListener('click', showMore);
  });
  refs.gallery.addEventListener('click', openModal);
